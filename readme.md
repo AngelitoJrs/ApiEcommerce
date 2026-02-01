@@ -30,8 +30,8 @@ Clonar el repositorio:
 
 Bash
 
-git clone https://github.com/tu-usuario/nanostore-security.git
-cd nanostore-security
+git clone https://github.com/AngelitoJrs/ApiEcommerce.git
+cd ApiEcommerce
 Instalar dependencias:
 
 Bash
