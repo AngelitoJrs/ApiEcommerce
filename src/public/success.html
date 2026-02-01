@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡Pago Exitoso! - NanoStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-10 rounded-2xl shadow-2xl text-center max-w-md">
+        <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">¡Gracias por tu compra!</h1>
+        <p class="text-gray-600 mb-8">Tu pago ha sido procesado correctamente.</p>
+        
+        <div class="space-y-3">
+            <a href="/" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
+                Volver a la tienda
+            </a>
+            <button onclick="window.location.href='/orders'" class="block w-full text-indigo-600 font-medium py-2 hover:underline">
+                Ver mis pedidos
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # Servidor de Node.js
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - nanostore-network
+
+  # Base de Datos MySQL
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: nanostore
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Opcional: Si quieres que cargue el database.sql al iniciar
+      # - ./database.sql:/docker-entrypoint-initdb.d/setup.sql
+    networks:
+      - nanostore-network
+
+networks:
+  nanostore-network:
+    driver: bridge
+
+volumes:
+  db_data:
